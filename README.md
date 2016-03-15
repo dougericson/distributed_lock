@@ -1,2 +1,3 @@
-# distributed_lock
-Distributed lock backed by Redis
+# distributed lock gem
+
+The distributed lock gem uses redis to implement a semaphore.
