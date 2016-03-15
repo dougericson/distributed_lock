@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |gem|
-  gem.name                  = 'distributed-lock'
+  gem.name                  = 'distributed_lock'
   gem.version               = '0.1.0'
   gem.authors               = ['Doug Ericson']
   gem.email                 = ['doug.ericson@bookbub.com']
