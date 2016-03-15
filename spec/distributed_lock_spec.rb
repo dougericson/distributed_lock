@@ -5,7 +5,7 @@ describe DistributedLock do
   before :each do
     redis_provider = Object.new
     def redis_provider.with
-      Redis.new
+      yield Redis.new
     end
     DistributedLock.setup(redis_provider, redis_provider)
   end

@@ -37,7 +37,7 @@ class DistributedLock
 
   def lock
     @@redis_provider.with do |redis|
-      redis.client.call([:set, lock_key, true, :nx, :px, timeout_ms]).present?
+      !redis.client.call([:set, lock_key, true, :nx, :px, timeout_ms]).nil?
     end
   end
 
@@ -115,6 +115,6 @@ class DistributedLock
   end
 
   def call_on_before_wait
-    @options[:on_before_wait].call if @options[:on_before_wait].present?
+    @options[:on_before_wait].call unless @options[:on_before_wait].nil?
   end
 end

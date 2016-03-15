@@ -14,5 +14,6 @@ Gem::Specification.new do |gem|
   gem.require_paths         = ['lib']
   gem.required_ruby_version = '>= 1.9.3'
 
+  gem.add_dependency "redis", "~> 3.2"
   gem.add_development_dependency 'rspec', '~> 2.14', '>= 2.14.1'
 end
